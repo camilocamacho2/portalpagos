@@ -15,6 +15,9 @@ const cors = require('cors')
 app.use(express.json())
 app.use(cors())
 
+console.log("El servidor esta arrancando...");
+
+
 const iniciarServidor = async () => {
   await conectarDB();
   const server = app.listen(port, () => console.log("Servidor escuchando por: " + port))
